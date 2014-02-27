@@ -1,6 +1,6 @@
 # Arduino Bendulum Library
 
-Bendulum.cpp Copyright 2013 by D. L. Ehnebuske  
+Bendulum Library Copyright 2013 by D. L. Ehnebuske  
 License terms: [Creative Commons Attribution-ShareAlike 3.0 United States (CC BY-SA 3.0 US)]
 (http://creativecommons.org/licenses/by-sa/3.0/us/ "CC BY-SA 3.0 US")
 

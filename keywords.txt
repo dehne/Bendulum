@@ -1,0 +1,42 @@
+#
+# Syntax coloring map for RgbLed
+#
+
+#
+# Datatypes
+#
+Bendulum	KEYWORD1
+
+#
+# Methods
+#
+beat	KEYWORD2
+cycle	KEYWORD2
+getCycleCounter	KEYWORD2
+getTgtSettle	KEYWORD2
+setTgtSettle	KEYWORD2
+getTgtSmoothing	KEYWORD2
+setTgtSmoothing	KEYWORD2
+getBias	KEYWORD2
+setBias	KEYWORD2
+incrBias	KEYWORD2
+getPeakScale	KEYWORD2
+setPeakScale	KEYWORD2
+isTick	KEYWORD2
+getAvgBpm	KEYWORD2
+getCurBpm	KEYWORD2
+getDelta	KEYWORD2
+getBeatDuration	KEYWORD2
+setBeatDuration	KEYWORD2
+incrBeatDuration	KEYWORD2
+getRunMode	KEYWORD2
+setRunMode	KEYWORD2
+
+#
+# Literals
+#
+SETTLING	LITERAL1
+SCALING	LITERAL1
+CALIBRATING	LITERAL1
+CALFINISH	LITERAL1
+RUNNING	LITERAL1
