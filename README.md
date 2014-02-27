@@ -29,9 +29,7 @@ Bendulum object is in:
 |------------ | -------------------------------------------------------------------------------------------- |
 | SETTLING    | The duration returned is measured using the (corrected) Arduino real-time Clock.             |
 | SCALING     | The duration returned is measured using the (corrected) Arduino real-time Clock.             |
-| CALIBRATING | A running average of beat duration is updated using the measured duration of the current
-                beat. As in the SETTLING mode, the current duration is measured with the (corrected)
-                Arduino real-time clock. The updated average is returned.                                    |
+| CALIBRATING | A running average of beat duration is updated using the measured duration of the current beat. As in the SETTLING mode, the current duration is measured with the (corrected) Arduino real-time clock. The updated average is returned.|
 | CALFINISH   | The duration returned is the value of the running average. No measurement is done.           |
 | RUNNING     | The duration returned is the value of the running average. No measurement is done.           |
 
