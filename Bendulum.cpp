@@ -1,6 +1,6 @@
 /****
  *
- *   Part of the "Bendulum" library for Arduino. Version 1.21
+ *   Part of the "Bendulum" library for Arduino. Version 1.22
  *
  *   Bendulum.cpp Copyright 2013 by D. L. Ehnebuske 
  *   License terms: Creative Commons Attribution-ShareAlike 3.0 United States (CC BY-SA 3.0 US) 
@@ -296,7 +296,7 @@ float Bendulum::getDelta(){
 	return (float)tickPeriod / tockPeriod;
 }
 
-// Get or set the beat duration in μs  or increment it in tenths of a second per day
+// Get or set the beat duration in μs or increment it in tenths of a second per day
 long Bendulum::getBeatDuration(){
 	return uspb;
 }
@@ -304,6 +304,11 @@ void Bendulum::setBeatDuration(long beatDur) {
 	uspb = tickAvg = tockAvg = beatDur;
 }
 long Bendulum::incrBeatDuration(long incr) {
+	long noOflow = 2000000000 / uspb;		// About the biggest adjustment it's safe to make
+	while (incr > noOflow) {
+		tickAvg = tockAvg = uspb += ((noOflow * uspb) + 432000) / 864000;
+		incr -= noOflow;
+	}
 	tickAvg = tockAvg = uspb += ((incr * uspb) + 432000) / 864000;
 	return uspb;
 }
