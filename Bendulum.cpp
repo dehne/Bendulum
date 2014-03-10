@@ -304,12 +304,17 @@ void Bendulum::setBeatDuration(long beatDur) {
 	uspb = tickAvg = tockAvg = beatDur;
 }
 long Bendulum::incrBeatDuration(long incr) {
+	if (uspb < 1) {							// If uspb not set
+		return 0;							//   can't adjust it
+	}
 	long noOflow = 2000000000 / uspb;		// About the biggest adjustment it's safe to make
-	while (incr > noOflow) {
-		tickAvg = tockAvg = uspb += ((noOflow * uspb) + 432000) / 864000;
+	long curUspb = uspb;
+	if (incr < 0) noOflow = -noOflow;
+	while (abs(incr) > abs(noOflow)) {
+		tickAvg = tockAvg = uspb += ((noOflow * curUspb) + 432000) / 864000;
 		incr -= noOflow;
 	}
-	tickAvg = tockAvg = uspb += ((incr * uspb) + 432000) / 864000;
+	tickAvg = tockAvg = uspb += ((incr * curUspb) + 432000) / 864000;
 	return uspb;
 }
 
