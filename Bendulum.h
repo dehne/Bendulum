@@ -1,6 +1,6 @@
 /****
  *
- *   Part of the "Bendulum" library for Arduino. Version 1.22
+ *   Part of the "Bendulum" library for Arduino. Version 1.23
  *
  *   Bendulum.h Copyright 2013 by D. L. Ehnebuske 
  *   License terms: Creative Commons Attribution-ShareAlike 3.0 United States (CC BY-SA 3.0 US) 

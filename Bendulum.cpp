@@ -1,6 +1,6 @@
 /****
  *
- *   Part of the "Bendulum" library for Arduino. Version 1.22
+ *   Part of the "Bendulum" library for Arduino. Version 1.23
  *
  *   Bendulum.cpp Copyright 2013 by D. L. Ehnebuske 
  *   License terms: Creative Commons Attribution-ShareAlike 3.0 United States (CC BY-SA 3.0 US) 
@@ -307,7 +307,7 @@ long Bendulum::incrBeatDuration(long incr) {
 	if (uspb < 1) {							// If uspb not set
 		return 0;							//   can't adjust it
 	}
-	tickAvg = tockAvg = uspb += round(uspb / (864000.0 / incr));
+	tickAvg = tockAvg = uspb = round(uspb * (1 + incr / 864000.0));
 	return uspb;
 }
 
