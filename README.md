@@ -15,7 +15,7 @@ going.
 
 ## What does this library do?
 
-This Arduino library defines a Bendulum object that can be used to drive a bendulum or pendulum connected to and
+This Arduino library defines a Bendulum object that can be used to drive a bendulum or pendulum connected to an
 Arduino. A Bendulum object works just as well for a pendulum whose bob has a magnet at its end.
 
 The main method is beat(). This method is intended to be invoked repeatedly in the loop() function of an Arduino sketch.
